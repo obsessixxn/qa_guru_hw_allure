@@ -116,7 +116,7 @@ ipython_config.py
 #pdm.toml
 .pdm-python
 .pdm-build/
-
+allure_results
 # pixi
 #   Similar to Pipfile.lock, it is generally recommended to include pixi.lock in version control.
 #pixi.lock
@@ -133,7 +133,8 @@ celerybeat.pid
 
 # SageMath parsed files
 *.sage.py
-
+allure-2.35.1
+allure-results
 # Environments
 .env
 .envrc
@@ -144,10 +145,14 @@ ENV/
 env.bak/
 venv.bak/
 
+
+#idea
+.idea
 # Spyder project settings
 .spyderproject
 .spyproject
 
+.allure-2.35.1
 # Rope project settings
 .ropeproject
 

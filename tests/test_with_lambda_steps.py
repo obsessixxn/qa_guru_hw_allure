@@ -13,9 +13,9 @@ def test_with_lambda_steps(setup_firefox):
     with allure.step('Open github'):
         browser.open('https://github.com')
     with allure.step('Searching for repository'):
-        browser.element('.input-button').click()
-        browser.element('.input-button').send_keys("eroshenkoam/xcresults")
-        browser.element('.input-button').press_enter()
+        browser.element(".search-input").click()
+        browser.element("#query-builder-test").type("eroshenkoam/xcresults")
+        browser.element("#query-builder-test").press_enter()
     with allure.step('go to repository'):
         browser.element(by.link_text("eroshenkoam/xcresults")).click()
     with allure.step('go to issues'):

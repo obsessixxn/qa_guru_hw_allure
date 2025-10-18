@@ -3,9 +3,11 @@ from selene import browser, by, be
 
 def test_selene(setup_firefox):
     browser.open("https://github.com")
-    browser.element('.input-button').click()
-    browser.element('.input-button').send_keys("eroshenkoam/xcresults")
-    browser.element('.input-button').press_enter()
+
+    browser.element(".search-input").click()
+    browser.element("#query-builder-test").type("eroshenkoam/xcresults")
+    browser.element("#query-builder-test").press_enter()
+
     browser.element(by.link_text("eroshenkoam/xcresults")).click()
 
     browser.element("#issues-tab").click()

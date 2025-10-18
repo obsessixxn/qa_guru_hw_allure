@@ -17,7 +17,7 @@ def test_github_with_decorators(setup_firefox):
     check_issue_with_name("Support for mapping XCTAttachment to Allure labels and environment fields")
 
 
-@allure.step("Открываем главную страницу")
+@allure.step("Open main page")
 def open_main_page():
     browser.open("https://github.com")
 
@@ -25,7 +25,7 @@ def open_main_page():
 @allure.step("Looking for {repo}")
 def looking_for_repo(repo):
     browser.element(".search-input").click()
-    browser.element("#query-builder-test").send_keys(repo)
+    browser.element("#query-builder-test").type(repo)
     browser.element("#query-builder-test").press_enter()
 
 
